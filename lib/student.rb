@@ -4,17 +4,9 @@ class Student
 
   @@all = []
 
-  describe "#new" do
-    it "takes in an argument of a hash and sets that new student's attributes using the key/value pairs of that hash." do 
-      expect{Student.new({:name => "Sophie DeBenedetto", :location => "Brooklyn, NY"})}.to_not raise_error
-      expect(student.name).to eq("Alex Patriquin")
-      expect(student.location).to eq("New York, NY")
-    end 
+ 
 
-    it "adds that new student to the Student class' collection of all existing students, stored in the `@@all` class variable." do 
-      expect(Student.class_variable_get(:@@all).first.name).to eq("Alex Patriquin")
-    end
-  end
+   
 
   def initialize(student_hash)
     @name = student_hash[:name]
