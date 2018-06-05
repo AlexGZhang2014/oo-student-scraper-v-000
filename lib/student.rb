@@ -17,7 +17,7 @@ class Student
   end
 
   def initialize(student_hash)
-    
+    self.send()
     @@all << self
   end
 
