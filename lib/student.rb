@@ -10,14 +10,6 @@ class Student
     @@all << self
   end
 
-  describe ".create_from_collection" do 
-    it "uses the Scraper class to create new students with the correct name and location." do 
-      Student.class_variable_set(:@@all, [])
-      Student.create_from_collection(student_index_array)
-      expect(Student.class_variable_get(:@@all).first.name).to eq("Alex Patriquin")
-    end
-  end
-
   def self.create_from_collection(students_array)
     students_array.each do |student_hash|
       self.new(student_hash)
