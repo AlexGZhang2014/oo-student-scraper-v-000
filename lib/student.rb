@@ -17,7 +17,9 @@ describe ".create_from_collection" do
   end
 
   def self.create_from_collection(students_array)
-    
+    students_array.each do |student_hash|
+      self.new(student_hash)
+    end
   end
 
   def add_student_attributes(attributes_hash)
