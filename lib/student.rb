@@ -20,7 +20,7 @@ class Student
     
   end
 
-describe ".create_from_collection" do 
+  describe ".create_from_collection" do 
     it "uses the Scraper class to create new students with the correct name and location." do 
       Student.class_variable_set(:@@all, [])
       Student.create_from_collection(student_index_array)
