@@ -17,7 +17,8 @@ class Student
   end
 
   def initialize(student_hash)
-    
+    @name = student_hash[:name]
+    @location = student_hash[:location]
   end
 
   describe ".create_from_collection" do 
