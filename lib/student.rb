@@ -17,7 +17,8 @@ class Student
   end
 
   def initialize(student_hash)
-    Student.new.send :name, ""
+    Student.new.send :name, student_hash[:name]
+    Student.new.send :location, student_hash[:location]
     @@all << self
   end
 
